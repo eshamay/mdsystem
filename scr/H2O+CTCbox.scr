@@ -1,13 +1,13 @@
-loadoff lib/pol3.lib
-loadoff lib/ccl4.lib
+loadoff ../lib/pol3.lib
+loadoff ../lib/ccl4.lib
 
-loadamberparams frcmod/frcmod.pol3
-loadamberparams frcmod/frcmod.ccl4
+loadamberparams ../frcmod/frcmod.pol3
+loadamberparams ../frcmod/frcmod.ccl4
 
-h2octcbox = loadpdb pdb/H2O+CTC.pdb
+h2octcbox = loadpdb ../pdb/H2O+CTC.pdb
 set h2octcbox box {30.0 75.0 30.0}
 
 check h2octcbox
 
-saveamberparmpol h2octcbox prmtop/H2O+CTC.prmtop mdcrd/H2O+CTC.mdcrd
+saveamberparmpol h2octcbox ../prmtop/H2O+CTC.prmtop ../mdcrd/H2O+CTC.mdcrd
 quit
