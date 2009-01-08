@@ -1,4 +1,0 @@
-loadamberparams frcmod.pol3
-loadoff lib/pol3.lib
-pol3box = loadpdb pdb/waterbox.pdb
-set pol3box box {26.0 26.0 26.0}
