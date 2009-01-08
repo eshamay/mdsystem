@@ -1,0 +1,164 @@
+
+          -------------------------------------------------------
+          Amber 9  SANDER                              2006
+          -------------------------------------------------------
+
+| Run on 01/08/2009 at 15:07:21
+  [-O]verwriting output
+
+File Assignments:
+|  MDIN: /home/eric/work/mdsystem/mdin/equilibration.mdin                      
+| MDOUT: /home/eric/work/mdsystem/mdout/H2O+CTC.equil.mdout                    
+|INPCRD: /home/eric/work/mdsystem/mdcrd/H2O+CTC.min.mdcrd                      
+|  PARM: /home/eric/work/mdsystem/prmtop/H2O+CTC.prmtop                        
+|RESTRT: /home/eric/work/mdsystem/restrt/H2O+CTC.equil.restrt                  
+|  REFC: refc                                                                  
+| MDVEL: mdvel                                                                 
+|  MDEN: /home/eric/work/mdsystem/mden/H2O+CTC.equil.mden                      
+| MDCRD: /home/eric/work/mdsystem/mdcrd/H2O+CTC.equil.mdcrd                    
+|MDINFO: mdinfo                                                                
+|INPDIP: inpdip                                                                
+|RSTDIP: /home/eric/work/mdsystem/dip/H2O+CTC.equil.dip                        
+
+ 
+ Here is the input file:
+ 
+                                                                               
+Running an equilibration                                                       
+  &cntrl                                                                       
+   NTX=1, IWRAP=1, imin=0, nmropt=0,                                           
+   NTF=2, NTC=2, NTB=1, NTP=0, IPOL=1, CUT=8.0,                                
+   NTT=3, TAUTP=5.0, TEMPI=300.0, TEMP0=300.0, nscm=250, gamma_ln=5.0,         
+   NTPR=2500, NTWR=1000,                                                       
+   NSTLIM=1000000, DT=0.001, T=0.0,                                            
+   WATNAM='h2o ', JFASTW=0,                                                    
+  /                                                                            
+  &ewald                                                                       
+   ew_type=0, indmeth=3, diptau=9.99, irstdip=0,                               
+  /                                                                            
+
+--------------------------------------------------------------------------------
+   1.  RESOURCE   USE: 
+--------------------------------------------------------------------------------
+
+| Flags: MPI                                                                    
+ getting new box info from bottom of inpcrd
+|  INFO: Old style inpcrd file read
+
+| peek_ewald_inpcrd: Box info found
+|Largest sphere to fit in unit cell has radius =    15.000
+| New format PARM file being parsed.
+| Version =    1.000 Date = 01/08/09 Time = 15:15:56
+ NATOM  =    4892 NTYPES =       4 NBONH =    4047 MBONA  =     676
+ NTHETH =       0 MTHETA =    1014 NPHIH =       0 MPHIA  =       0
+ NHPARM =       0 NPARM  =       0 NNB   =    7255 NRES   =    1518
+ NBONA  =     676 NTHETA =    1014 NPHIA =       0 NUMBND =       3
+ NUMANG =       1 NPTRA  =       0 NATYP =       4 NPHB   =       0
+ IFBOX  =       1 NMXRS  =       5 IFCAP =       0 NEXTRA =       0
+ NCOPY  =       0
+
+
+|     Memory Use     Allocated
+|     Real              402714
+|     Hollerith         104252
+|     Integer           133393
+|     Max Pairs         611500
+|     nblistReal         58704
+|     nblist Int        221104
+|       Total             7785 kbytes
+| Duplicated    0 dihedrals
+| Duplicated    0 dihedrals
+
+     BOX TYPE: RECTILINEAR
+
+--------------------------------------------------------------------------------
+   2.  CONTROL  DATA  FOR  THE  RUN
+--------------------------------------------------------------------------------
+
+                                                                                
+
+General flags:
+     imin    =       0, nmropt  =       0
+
+Nature and format of input:
+     ntx     =       1, irest   =       0, ntrx    =       1
+
+Nature and format of output:
+     ntxo    =       1, ntpr    =    2500, ntrx    =       1, ntwr    =    1000
+     iwrap   =       1, ntwx    =       0, ntwv    =       0, ntwe    =       0
+     ioutfm  =       0, ntwprt  =       0, idecomp =       0, rbornstat=      0
+
+Potential function:
+     ntf     =       2, ntb     =       1, igb     =       0, nsnb    =      25
+     ipol    =       1, gbsa    =       0, iesp    =       0
+     dielc   =   1.00000, cut     =   8.00000, intdiel =   1.00000
+     scnb    =   2.00000, scee    =   1.20000
+
+Frozen or restrained atoms:
+     ibelly  =       0, ntr     =       0
+
+Molecular dynamics:
+     nstlim  =   1000000, nscm    =       250, nrespa  =         1
+     t       =   0.00000, dt      =   0.00100, vlimit  =  20.00000
+
+Langevin dynamics temperature regulation:
+     ig      =   71277
+     temp0   = 300.00000, tempi   = 300.00000, gamma_ln=   5.00000
+
+SHAKE:
+     ntc     =       2, jfastw  =       0
+     tol     =   0.00001
+
+Polarizable options:
+     indmeth =       3, maxiter =      20, irstdip =       0, scaldip =       1
+     diptau  =   9.99000, dipmass =   0.33000
+
+Ewald parameters:
+     verbose =       0, ew_type =       0, nbflag  =       1, use_pme =       1
+     vdwmeth =       1, eedmeth =       1, netfrc  =       1
+     Box X =   30.000   Box Y =   75.000   Box Z =   30.000
+     Alpha =   90.000   Beta  =   90.000   Gamma =   90.000
+     NFFT1 =   30       NFFT2 =   75       NFFT3 =   30
+     Cutoff=    8.000   Tol   =0.100E-04
+     Ewald Coefficient =  0.34864
+     Interpolation order =    4
+
+--------------------------------------------------------------------------------
+   3.  ATOMIC COORDINATES AND VELOCITIES
+--------------------------------------------------------------------------------
+
+                                                                                
+ begin time read from input coords =     0.000 ps
+
+ Number of triangulated 3-point waters found:     1349
+|  Atom division among processors:
+|         0    1223    2447    3671    4892
+
+     Sum of charges from parm topology file =   0.00000000
+     Forcing neutrality...
+|  Running AMBER/MPI version on    4 nodes
+
+
+--------------------------------------------------------------------------------
+   4.  RESULTS
+--------------------------------------------------------------------------------
+
+ ---------------------------------------------------
+ APPROXIMATING switch and d/dx switch using CUBIC SPLINE INTERPOLATION
+ using   5000.0 points per unit in tabled values
+ TESTING RELATIVE ERROR over r ranging from 0.0 to cutoff
+| CHECK switch(x): max rel err =   0.2738E-14   at   2.422500
+| CHECK d/dx switch(x): max rel err =   0.8314E-11   at   2.736960
+ ---------------------------------------------------
+| Local SIZE OF NONBOND LIST =     302742
+| TOTAL SIZE OF NONBOND LIST =    1147350
+
+ NSTEP =        0   TIME(PS) =       0.000  TEMP(K) =   419.30  PRESS =     0.0
+ Etot   =     16335.4115  EKtot   =      4428.1611  EPtot      =     11907.2504
+ BOND   =      2954.3419  ANGLE   =      4042.2271  DIHED      =         0.0000
+ 1-4 NB =         0.0000  1-4 EEL =         0.0000  VDWAALS    =     18870.6920
+ EELEC  =    -10771.1067  EHBOND  =         0.0000  RESTRAINT  =         0.0000
+ EPOLZ  =     -3188.9039
+ Dipole convergence: rms =  0.587E-04 temperature =   0.00
+ ------------------------------------------------------------------------------
+

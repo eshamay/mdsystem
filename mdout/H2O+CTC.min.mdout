@@ -1,0 +1,879 @@
+
+          -------------------------------------------------------
+          Amber 9  SANDER                              2006
+          -------------------------------------------------------
+
+| Run on 01/08/2009 at 14:47:14
+  [-O]verwriting output
+
+File Assignments:
+|  MDIN: /home/eric/work/mdsystem/mdin/minimization.mdin                       
+| MDOUT: /home/eric/work/mdsystem/mdout/H2O+CTC.min.mdout                      
+|INPCRD: /home/eric/work/mdsystem/mdcrd/H2O+CTC.mdcrd                          
+|  PARM: /home/eric/work/mdsystem/prmtop/H2O+CTC.prmtop                        
+|RESTRT: /home/eric/work/mdsystem/mdcrd/H2O+CTC.min.mdcrd                      
+|  REFC: refc                                                                  
+| MDVEL: mdvel                                                                 
+|  MDEN: /home/eric/work/mdsystem/mden/H2O+CTC.min.mden                        
+| MDCRD: mdcrd                                                                 
+|MDINFO: mdinfo                                                                
+|INPDIP: inpdip                                                                
+|RSTDIP: /home/eric/work/mdsystem/dip/H2O+CTC.min.dip                          
+
+ 
+ Here is the input file:
+ 
+                                                                               
+ General minimization script                                                   
+ &cntrl                                                                        
+  IMIN = 1, DX0=0.5,                                                           
+  IWRAP = 1, NTF=2, NTC=2, NTB = 1, IPOL=1,                                    
+  NTPR = 100, NTWR = 100,                                                      
+  NTMIN = 1,                                                                   
+  MAXCYC = 1000000, NCYC=5000,                                                 
+  WATNAM='h2o ', JFASTW=0,                                                     
+  CUT = 10.0                                                                   
+ /                                                                             
+
+--------------------------------------------------------------------------------
+   1.  RESOURCE   USE: 
+--------------------------------------------------------------------------------
+
+| Flags: MPI                                                                    
+ getting new box info from bottom of inpcrd
+|  INFO: Old style inpcrd file read
+
+| peek_ewald_inpcrd: Box info found
+|Largest sphere to fit in unit cell has radius =    15.000
+| New format PARM file being parsed.
+| Version =    1.000 Date = 01/08/09 Time = 15:15:56
+ NATOM  =    4892 NTYPES =       4 NBONH =    4047 MBONA  =     676
+ NTHETH =       0 MTHETA =    1014 NPHIH =       0 MPHIA  =       0
+ NHPARM =       0 NPARM  =       0 NNB   =    7255 NRES   =    1518
+ NBONA  =     676 NTHETA =    1014 NPHIA =       0 NUMBND =       3
+ NUMANG =       1 NPTRA  =       0 NATYP =       4 NPHB   =       0
+ IFBOX  =       1 NMXRS  =       5 IFCAP =       0 NEXTRA =       0
+ NCOPY  =       0
+
+
+|     Memory Use     Allocated
+|     Real              460314
+|     Hollerith         104252
+|     Integer           133393
+|     Max Pairs        1056672
+|     nblistReal         58704
+|     nblist Int        163633
+|       Total             9749 kbytes
+| Duplicated    0 dihedrals
+| Duplicated    0 dihedrals
+
+     BOX TYPE: RECTILINEAR
+
+--------------------------------------------------------------------------------
+   2.  CONTROL  DATA  FOR  THE  RUN
+--------------------------------------------------------------------------------
+
+                                                                                
+
+General flags:
+     imin    =       1, nmropt  =       0
+
+Nature and format of input:
+     ntx     =       1, irest   =       0, ntrx    =       1
+
+Nature and format of output:
+     ntxo    =       1, ntpr    =     100, ntrx    =       1, ntwr    =     100
+     iwrap   =       1, ntwx    =       0, ntwv    =       0, ntwe    =       0
+     ioutfm  =       0, ntwprt  =       0, idecomp =       0, rbornstat=      0
+
+Potential function:
+     ntf     =       2, ntb     =       1, igb     =       0, nsnb    =      25
+     ipol    =       1, gbsa    =       0, iesp    =       0
+     dielc   =   1.00000, cut     =  10.00000, intdiel =   1.00000
+     scnb    =   2.00000, scee    =   1.20000
+
+Frozen or restrained atoms:
+     ibelly  =       0, ntr     =       0
+
+Energy minimization:
+     maxcyc  = 1000000, ncyc    =    5000, ntmin   =       1
+     dx0     =   0.50000, drms    =   0.00010
+
+SHAKE:
+     ntc     =       2, jfastw  =       0
+     tol     =   0.00001
+
+Polarizable options:
+     indmeth =       3, maxiter =      20, irstdip =       0, scaldip =       1
+     diptau  =  11.00000, dipmass =   0.33000
+
+Ewald parameters:
+     verbose =       0, ew_type =       0, nbflag  =       1, use_pme =       1
+     vdwmeth =       1, eedmeth =       1, netfrc  =       0
+     Box X =   30.000   Box Y =   75.000   Box Z =   30.000
+     Alpha =   90.000   Beta  =   90.000   Gamma =   90.000
+     NFFT1 =   30       NFFT2 =   75       NFFT3 =   30
+     Cutoff=   10.000   Tol   =0.100E-04
+     Ewald Coefficient =  0.27511
+     Interpolation order =    4
+
+--------------------------------------------------------------------------------
+   3.  ATOMIC COORDINATES AND VELOCITIES
+--------------------------------------------------------------------------------
+
+                                                                                
+ begin time read from input coords =     0.000 ps
+
+ Number of triangulated 3-point waters found:     1349
+|  Atom division among processors:
+|         0    1223    2447    3671    4892
+
+     Sum of charges from parm topology file =   0.00000000
+     Forcing neutrality...
+|  Running AMBER/MPI version on    4 nodes
+
+
+--------------------------------------------------------------------------------
+   4.  RESULTS
+--------------------------------------------------------------------------------
+
+ ---------------------------------------------------
+ APPROXIMATING switch and d/dx switch using CUBIC SPLINE INTERPOLATION
+ using   5000.0 points per unit in tabled values
+ TESTING RELATIVE ERROR over r ranging from 0.0 to cutoff
+| CHECK switch(x): max rel err =   0.2738E-14   at   2.422500
+| CHECK d/dx switch(x): max rel err =   0.8314E-11   at   2.736960
+ ---------------------------------------------------
+| Local SIZE OF NONBOND LIST =     451793
+| TOTAL SIZE OF NONBOND LIST =    1488929
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+      1       1.1039E+07     3.9587E+04     1.7268E+06     Cl4       795
+
+ BOND    =       25.9842  ANGLE   =        0.0174  DIHED      =        0.0000
+ VDWAALS = 11039496.6210  EEL     =      -98.5205  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =     -606.4966
+ Dipole convergence: rms =  0.952E-04 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+    100       7.1100E+04     1.4296E+01     4.9180E+02     C         246
+
+ BOND    =    12376.9805  ANGLE   =    26061.4871  DIHED      =        0.0000
+ VDWAALS =    40054.2944  EEL     =    -7161.8412  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =     -230.8993
+ Dipole convergence: rms =  0.118E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+    200       4.6866E+04     1.0264E+01     1.5695E+02     C         446
+
+ BOND    =     7415.5476  ANGLE   =    18012.9087  DIHED      =        0.0000
+ VDWAALS =    29898.5957  EEL     =    -8620.4282  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      159.0531
+ Dipole convergence: rms =  0.153E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+    300       3.8272E+04     1.0248E+01     1.1007E+02     C         576
+
+ BOND    =     6116.0332  ANGLE   =    14432.0162  DIHED      =        0.0000
+ VDWAALS =    26649.4942  EEL     =    -9182.0452  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      256.4708
+ Dipole convergence: rms =  0.162E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+    400       3.3200E+04     1.0270E+01     1.1827E+02     C         576
+
+ BOND    =     5336.2721  ANGLE   =    12469.1251  DIHED      =        0.0000
+ VDWAALS =    24390.6783  EEL     =    -9372.0427  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      376.3852
+ Dipole convergence: rms =  0.165E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+    500       2.9589E+04     1.0647E+01     2.0702E+02     C         576
+
+ BOND    =     4853.4739  ANGLE   =    10895.3499  DIHED      =        0.0000
+ VDWAALS =    23047.0679  EEL     =    -9613.3212  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      406.4937
+ Dipole convergence: rms =  0.169E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+    600       2.7133E+04     1.2971E+01     5.2335E+02     C         661
+
+ BOND    =     4619.7346  ANGLE   =     9835.0168  DIHED      =        0.0000
+ VDWAALS =    21994.2832  EEL     =    -9718.5033  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      402.7350
+ Dipole convergence: rms =  0.169E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+    700       2.4553E+04     1.1123E+01     2.5186E+02     C         661
+
+ BOND    =     4264.4736  ANGLE   =     8326.0151  DIHED      =        0.0000
+ VDWAALS =    21327.7408  EEL     =    -9762.7186  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      397.8246
+ Dipole convergence: rms =  0.173E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+    800       2.2316E+04     1.0508E+01     4.2107E+01     O        1518
+
+ BOND    =     3970.1958  ANGLE   =     7229.3967  DIHED      =        0.0000
+ VDWAALS =    20678.3685  EEL     =    -9998.5825  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      437.1126
+ Dipole convergence: rms =  0.176E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+    900       2.0781E+04     1.0636E+01     3.9006E+01     C         741
+
+ BOND    =     3741.2424  ANGLE   =     6533.9648  DIHED      =        0.0000
+ VDWAALS =    20223.9702  EEL     =   -10117.1504  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      399.2116
+ Dipole convergence: rms =  0.176E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   1000       1.9500E+04     1.0769E+01     1.1597E+02     C         831
+
+ BOND    =     3577.3863  ANGLE   =     5984.2349  DIHED      =        0.0000
+ VDWAALS =    19750.6258  EEL     =   -10298.3528  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      486.2240
+ Dipole convergence: rms =  0.180E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   1100       1.8472E+04     1.0599E+01     3.4852E+01     H1       4504
+
+ BOND    =     3375.8069  ANGLE   =     5539.8445  DIHED      =        0.0000
+ VDWAALS =    19357.2135  EEL     =   -10296.1057  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      495.2622
+ Dipole convergence: rms =  0.179E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   1200       1.7726E+04     1.0686E+01     3.8988E+01     C         241
+
+ BOND    =     3243.3615  ANGLE   =     5047.3666  DIHED      =        0.0000
+ VDWAALS =    19452.9534  EEL     =   -10463.3247  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      445.3929
+ Dipole convergence: rms =  0.180E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   1300       1.7104E+04     1.1407E+01     2.9174E+02     C         241
+
+ BOND    =     3172.1913  ANGLE   =     4628.0337  DIHED      =        0.0000
+ VDWAALS =    19292.0155  EEL     =   -10458.1100  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      469.7096
+ Dipole convergence: rms =  0.181E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   1400       1.6745E+04     1.0781E+01     3.7320E+01     O        3180
+
+ BOND    =     3163.5248  ANGLE   =     4267.7140  DIHED      =        0.0000
+ VDWAALS =    19386.6600  EEL     =   -10568.7097  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      496.2612
+ Dipole convergence: rms =  0.183E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   1500       1.6745E+04     1.0781E+01     3.7300E+01     O        3180
+
+ BOND    =     3163.4696  ANGLE   =     4267.5845  DIHED      =        0.0000
+ VDWAALS =    19387.2200  EEL     =   -10569.0433  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      496.2607
+ Dipole convergence: rms =  0.183E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   1600       1.6745E+04     1.0782E+01     3.7298E+01     O        3180
+
+ BOND    =     3163.4629  ANGLE   =     4267.5689  DIHED      =        0.0000
+ VDWAALS =    19387.2755  EEL     =   -10569.0796  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      496.2609
+ Dipole convergence: rms =  0.183E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   1700       1.6745E+04     1.0782E+01     3.7296E+01     O        3180
+
+ BOND    =     3163.4566  ANGLE   =     4267.5542  DIHED      =        0.0000
+ VDWAALS =    19387.3270  EEL     =   -10569.1048  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      496.2607
+ Dipole convergence: rms =  0.183E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   1800       1.6745E+04     1.0782E+01     3.7291E+01     O        3180
+
+ BOND    =     3163.4444  ANGLE   =     4267.5259  DIHED      =        0.0000
+ VDWAALS =    19387.4205  EEL     =   -10569.1805  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      496.2606
+ Dipole convergence: rms =  0.183E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   1900       1.6745E+04     1.0782E+01     3.7287E+01     O        3180
+
+ BOND    =     3163.4331  ANGLE   =     4267.4997  DIHED      =        0.0000
+ VDWAALS =    19387.5123  EEL     =   -10569.2466  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      496.2610
+ Dipole convergence: rms =  0.183E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   2000       1.6745E+04     1.0782E+01     3.7284E+01     O        3180
+
+ BOND    =     3163.4226  ANGLE   =     4267.4755  DIHED      =        0.0000
+ VDWAALS =    19387.6005  EEL     =   -10569.3171  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      496.2610
+ Dipole convergence: rms =  0.183E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   2100       1.6745E+04     1.0782E+01     3.7280E+01     O        3180
+
+ BOND    =     3163.4126  ANGLE   =     4267.4523  DIHED      =        0.0000
+ VDWAALS =    19387.6815  EEL     =   -10569.3790  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      496.2612
+ Dipole convergence: rms =  0.183E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   2200       1.6745E+04     1.0782E+01     3.7273E+01     O        3180
+
+ BOND    =     3163.3949  ANGLE   =     4267.4114  DIHED      =        0.0000
+ VDWAALS =    19387.7580  EEL     =   -10569.4914  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      496.2610
+ Dipole convergence: rms =  0.183E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   2300       1.6745E+04     1.0782E+01     3.7268E+01     O        3180
+
+ BOND    =     3163.3817  ANGLE   =     4267.3811  DIHED      =        0.0000
+ VDWAALS =    19387.8911  EEL     =   -10569.5674  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      496.2612
+ Dipole convergence: rms =  0.183E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   2400       1.6745E+04     1.0782E+01     3.7266E+01     O        3180
+
+ BOND    =     3163.3743  ANGLE   =     4267.3642  DIHED      =        0.0000
+ VDWAALS =    19387.9493  EEL     =   -10569.6079  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      496.2612
+ Dipole convergence: rms =  0.183E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   2500       1.6745E+04     1.0782E+01     3.7263E+01     O        3180
+
+ BOND    =     3163.3630  ANGLE   =     4267.3384  DIHED      =        0.0000
+ VDWAALS =    19388.0403  EEL     =   -10569.6782  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      496.2615
+ Dipole convergence: rms =  0.183E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   2600       1.6745E+04     1.0782E+01     3.7258E+01     O        3180
+
+ BOND    =     3163.3499  ANGLE   =     4267.3083  DIHED      =        0.0000
+ VDWAALS =    19388.1538  EEL     =   -10569.7509  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      496.2617
+ Dipole convergence: rms =  0.183E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   2700       1.6745E+04     1.0782E+01     3.7254E+01     O        3180
+
+ BOND    =     3163.3399  ANGLE   =     4267.2857  DIHED      =        0.0000
+ VDWAALS =    19388.2424  EEL     =   -10569.8091  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      496.2617
+ Dipole convergence: rms =  0.183E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   2800       1.6745E+04     1.0782E+01     3.7249E+01     O        3180
+
+ BOND    =     3163.3256  ANGLE   =     4267.2531  DIHED      =        0.0000
+ VDWAALS =    19388.3675  EEL     =   -10569.8992  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      496.2616
+ Dipole convergence: rms =  0.183E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   2900       1.6745E+04     1.0783E+01     3.7245E+01     O        3180
+
+ BOND    =     3163.3149  ANGLE   =     4267.2288  DIHED      =        0.0000
+ VDWAALS =    19388.4403  EEL     =   -10569.9596  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      496.2622
+ Dipole convergence: rms =  0.183E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   3000       1.6745E+04     1.0783E+01     3.7241E+01     O        3180
+
+ BOND    =     3163.3042  ANGLE   =     4267.2048  DIHED      =        0.0000
+ VDWAALS =    19388.5567  EEL     =   -10570.0127  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      496.2610
+ Dipole convergence: rms =  0.183E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   3100       1.6745E+04     1.0783E+01     3.7235E+01     O        3180
+
+ BOND    =     3163.2900  ANGLE   =     4267.1729  DIHED      =        0.0000
+ VDWAALS =    19388.6164  EEL     =   -10570.1033  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      496.2610
+ Dipole convergence: rms =  0.183E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   3200       1.6674E+04     1.0826E+01     3.8157E+01     O        2160
+
+ BOND    =     3119.4346  ANGLE   =     4191.2820  DIHED      =        0.0000
+ VDWAALS =    19437.1791  EEL     =   -10587.7726  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      513.5491
+ Dipole convergence: rms =  0.184E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   3300       1.5993E+04     1.1103E+01     1.4436E+02     C         326
+
+ BOND    =     2988.2598  ANGLE   =     4072.3503  DIHED      =        0.0000
+ VDWAALS =    18927.0795  EEL     =   -10476.6806  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      481.8112
+ Dipole convergence: rms =  0.182E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   3400       1.5808E+04     1.0923E+01     3.7325E+01     O        1089
+
+ BOND    =     2955.5986  ANGLE   =     4047.1195  DIHED      =        0.0000
+ VDWAALS =    19102.4825  EEL     =   -10731.8640  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      435.0493
+ Dipole convergence: rms =  0.183E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   3500       1.5808E+04     1.0928E+01     4.4447E+01     O        1089
+
+ BOND    =     2954.4598  ANGLE   =     4042.5869  DIHED      =        0.0000
+ VDWAALS =    19102.2046  EEL     =   -10729.7624  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      438.2641
+ Dipole convergence: rms =  0.184E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   3600       1.5808E+04     1.0928E+01     4.4446E+01     O        1089
+
+ BOND    =     2954.4567  ANGLE   =     4042.5762  DIHED      =        0.0000
+ VDWAALS =    19102.2161  EEL     =   -10729.7886  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      438.2703
+ Dipole convergence: rms =  0.184E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   3700       1.5808E+04     1.0928E+01     4.4446E+01     O        1089
+
+ BOND    =     2954.4540  ANGLE   =     4042.5670  DIHED      =        0.0000
+ VDWAALS =    19102.2314  EEL     =   -10729.8023  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      438.2762
+ Dipole convergence: rms =  0.184E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   3800       1.5808E+04     1.0928E+01     4.4445E+01     O        1089
+
+ BOND    =     2954.4501  ANGLE   =     4042.5540  DIHED      =        0.0000
+ VDWAALS =    19102.2767  EEL     =   -10729.8444  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      438.2846
+ Dipole convergence: rms =  0.184E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   3900       1.5808E+04     1.0928E+01     4.4444E+01     O        1089
+
+ BOND    =     2954.4464  ANGLE   =     4042.5418  DIHED      =        0.0000
+ VDWAALS =    19102.3128  EEL     =   -10729.8810  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      438.2930
+ Dipole convergence: rms =  0.184E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   4000       1.5808E+04     1.0928E+01     4.4443E+01     O        1089
+
+ BOND    =     2954.4447  ANGLE   =     4042.5361  DIHED      =        0.0000
+ VDWAALS =    19102.3515  EEL     =   -10729.8979  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      438.2968
+ Dipole convergence: rms =  0.184E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   4100       1.5808E+04     1.0928E+01     4.4442E+01     O        1089
+
+ BOND    =     2954.4425  ANGLE   =     4042.5290  DIHED      =        0.0000
+ VDWAALS =    19102.3747  EEL     =   -10729.9129  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      438.3011
+ Dipole convergence: rms =  0.184E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   4200       1.5808E+04     1.0928E+01     4.4442E+01     O        1089
+
+ BOND    =     2954.4402  ANGLE   =     4042.5213  DIHED      =        0.0000
+ VDWAALS =    19102.4030  EEL     =   -10729.9211  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      438.3050
+ Dipole convergence: rms =  0.184E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   4300       1.5808E+04     1.0928E+01     4.4441E+01     O        1089
+
+ BOND    =     2954.4384  ANGLE   =     4042.5155  DIHED      =        0.0000
+ VDWAALS =    19102.4192  EEL     =   -10729.9273  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      438.3091
+ Dipole convergence: rms =  0.184E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   4400       1.5808E+04     1.0928E+01     4.4440E+01     O        1089
+
+ BOND    =     2954.4365  ANGLE   =     4042.5091  DIHED      =        0.0000
+ VDWAALS =    19102.4433  EEL     =   -10729.9361  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      438.3132
+ Dipole convergence: rms =  0.184E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   4500       1.5808E+04     1.0928E+01     4.4440E+01     O        1089
+
+ BOND    =     2954.4345  ANGLE   =     4042.5028  DIHED      =        0.0000
+ VDWAALS =    19102.4712  EEL     =   -10729.9504  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      438.3168
+ Dipole convergence: rms =  0.184E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   4600       1.5808E+04     1.0928E+01     4.4439E+01     O        1089
+
+ BOND    =     2954.4316  ANGLE   =     4042.4934  DIHED      =        0.0000
+ VDWAALS =    19102.4866  EEL     =   -10729.9773  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      438.3230
+ Dipole convergence: rms =  0.184E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   4700       1.5808E+04     1.0928E+01     4.4437E+01     O        1089
+
+ BOND    =     2954.4285  ANGLE   =     4042.4832  DIHED      =        0.0000
+ VDWAALS =    19102.5094  EEL     =   -10729.9949  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      438.3285
+ Dipole convergence: rms =  0.184E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   4800       1.5808E+04     1.0928E+01     4.4436E+01     O        1089
+
+ BOND    =     2954.4254  ANGLE   =     4042.4733  DIHED      =        0.0000
+ VDWAALS =    19102.5281  EEL     =   -10730.0161  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      438.3352
+ Dipole convergence: rms =  0.184E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   4900       1.5808E+04     1.0928E+01     4.4435E+01     O        1089
+
+ BOND    =     2954.4216  ANGLE   =     4042.4610  DIHED      =        0.0000
+ VDWAALS =    19102.5557  EEL     =   -10730.0465  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      438.3430
+ Dipole convergence: rms =  0.184E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   5000       1.5808E+04     1.0928E+01     4.4433E+01     O        1089
+
+ BOND    =     2954.4191  ANGLE   =     4042.4534  DIHED      =        0.0000
+ VDWAALS =    19102.5322  EEL     =   -10730.0597  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      438.3469
+ Dipole convergence: rms =  0.184E+00 temperature =   0.00
+
+     .... RESTARTED DUE TO LINMIN FAILURE ...
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   5100       1.5808E+04     1.0928E+01     4.4409E+01     O        1089
+
+ BOND    =     2954.3751  ANGLE   =     4042.3245  DIHED      =        0.0000
+ VDWAALS =    19102.8066  EEL     =   -10730.3171  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      438.4285
+ Dipole convergence: rms =  0.184E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   5200       1.5808E+04     1.0928E+01     4.4408E+01     O        1089
+
+ BOND    =     2954.3746  ANGLE   =     4042.3231  DIHED      =        0.0000
+ VDWAALS =    19102.8104  EEL     =   -10730.3190  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      438.4295
+ Dipole convergence: rms =  0.184E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   5300       1.5808E+04     1.0928E+01     4.4408E+01     O        1089
+
+ BOND    =     2954.3742  ANGLE   =     4042.3220  DIHED      =        0.0000
+ VDWAALS =    19102.8132  EEL     =   -10730.3187  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      438.4304
+ Dipole convergence: rms =  0.184E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   5400       1.5808E+04     1.0928E+01     4.4408E+01     O        1089
+
+ BOND    =     2954.3738  ANGLE   =     4042.3207  DIHED      =        0.0000
+ VDWAALS =    19102.8179  EEL     =   -10730.3206  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      438.4313
+ Dipole convergence: rms =  0.184E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   5500       1.5808E+04     1.0928E+01     4.4407E+01     O        1089
+
+ BOND    =     2954.3733  ANGLE   =     4042.3191  DIHED      =        0.0000
+ VDWAALS =    19102.8271  EEL     =   -10730.3240  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      438.4320
+ Dipole convergence: rms =  0.184E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   5600       1.5808E+04     1.0928E+01     4.4407E+01     O        1089
+
+ BOND    =     2954.3721  ANGLE   =     4042.3154  DIHED      =        0.0000
+ VDWAALS =    19102.8378  EEL     =   -10730.3331  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      438.4340
+ Dipole convergence: rms =  0.184E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   5700       1.5808E+04     1.0928E+01     4.4406E+01     O        1089
+
+ BOND    =     2954.3717  ANGLE   =     4042.3141  DIHED      =        0.0000
+ VDWAALS =    19102.8420  EEL     =   -10730.3356  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      438.4348
+ Dipole convergence: rms =  0.184E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   5800       1.5808E+04     1.0928E+01     4.4406E+01     O        1089
+
+ BOND    =     2954.3710  ANGLE   =     4042.3122  DIHED      =        0.0000
+ VDWAALS =    19102.8465  EEL     =   -10730.3367  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      438.4360
+ Dipole convergence: rms =  0.184E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   5900       1.5808E+04     1.0928E+01     4.4406E+01     O        1089
+
+ BOND    =     2954.3708  ANGLE   =     4042.3114  DIHED      =        0.0000
+ VDWAALS =    19102.8490  EEL     =   -10730.3365  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      438.4364
+ Dipole convergence: rms =  0.184E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   6000       1.5808E+04     1.0928E+01     4.4405E+01     O        1089
+
+ BOND    =     2954.3698  ANGLE   =     4042.3084  DIHED      =        0.0000
+ VDWAALS =    19102.8582  EEL     =   -10730.3424  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      438.4382
+ Dipole convergence: rms =  0.184E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   6100       1.5808E+04     1.0928E+01     4.4404E+01     O        1089
+
+ BOND    =     2954.3687  ANGLE   =     4042.3052  DIHED      =        0.0000
+ VDWAALS =    19102.8794  EEL     =   -10730.3573  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      438.4407
+ Dipole convergence: rms =  0.184E+00 temperature =   0.00
+
+     .... RESTARTED DUE TO LINMIN FAILURE ...
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   6200       1.5808E+04     1.0928E+01     4.4401E+01     O        1089
+
+ BOND    =     2954.3648  ANGLE   =     4042.2934  DIHED      =        0.0000
+ VDWAALS =    19102.9156  EEL     =   -10730.3868  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      438.4470
+ Dipole convergence: rms =  0.184E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   6300       1.5808E+04     1.0928E+01     4.4401E+01     O        1089
+
+ BOND    =     2954.3644  ANGLE   =     4042.2923  DIHED      =        0.0000
+ VDWAALS =    19102.9192  EEL     =   -10730.3888  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      438.4480
+ Dipole convergence: rms =  0.184E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   6400       1.5808E+04     1.0928E+01     4.4401E+01     O        1089
+
+ BOND    =     2954.3642  ANGLE   =     4042.2915  DIHED      =        0.0000
+ VDWAALS =    19102.9835  EEL     =   -10730.3909  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      438.4484
+ Dipole convergence: rms =  0.184E+00 temperature =   0.00
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   6500       1.5808E+04     1.0928E+01     4.4401E+01     O        1089
+
+ BOND    =     2954.3639  ANGLE   =     4042.2907  DIHED      =        0.0000
+ VDWAALS =    19102.9937  EEL     =   -10730.3908  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      438.4487
+ Dipole convergence: rms =  0.184E+00 temperature =   0.00
+
+     .... RESTARTED DUE TO LINMIN FAILURE ...
+
+     .... RESTARTED DUE TO LINMIN FAILURE ...
+
+     .... RESTARTED DUE TO LINMIN FAILURE ...
+
+     ***** REPEATED LINMIN FAILURE *****
+
+     ***** SEE http://amber.scripps.edu/Questions/linmin.html FOR MORE INFO *****
+
+
+                    FINAL RESULTS
+
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+   6589       1.5808E+04     1.0928E+01     4.4384E+01     O        1089
+
+ BOND    =     2954.3419  ANGLE   =     4042.2271  DIHED      =        0.0000
+ VDWAALS =    19103.1763  EEL     =   -10730.5434  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      438.4887
+ Dipole convergence: rms =  0.184E+00 temperature =   0.00
+
+--------------------------------------------------------------------------------
+   5.  TIMINGS
+--------------------------------------------------------------------------------
+
+|                Build the list             8.48 (93.37% of List )
+|                Other                      0.60 ( 6.63% of List )
+|             List time                  9.08 ( 1.29% of Nonbo)
+|                   Short_ene time           548.28 (98.72% of Direc)
+|                   Other                      7.10 ( 1.28% of Direc)
+|                Direct Ewald time        555.37 (79.90% of Ewald)
+|                Adjust Ewald time          2.15 ( 0.31% of Ewald)
+|                   Fill Bspline coeffs        5.09 ( 6.22% of Recip)
+|                   Fill charge grid           7.62 ( 9.31% of Recip)
+|                   Scalar sum                18.89 (23.07% of Recip)
+|                   Grad sum                  17.47 (21.33% of Recip)
+|                      FFT back comm time         8.46 (29.87% of FFT t)
+|                      Other                     19.85 (70.13% of FFT t)
+|                   FFT time                  28.31 (34.57% of Recip)
+|                   Other                      4.51 ( 5.51% of Recip)
+|                Recip Ewald time          81.90 (11.78% of Ewald)
+|                Force Adjust              38.55 ( 5.55% of Ewald)
+|                Virial junk               11.52 ( 1.66% of Ewald)
+|                Start sycnronization       0.45 ( 0.07% of Ewald)
+|                dipole distribute ti       3.68 ( 0.53% of Ewald)
+|                Other                      1.48 ( 0.21% of Ewald)
+|             Ewald time               695.12 (98.71% of Nonbo)
+|          Nonbond force            704.24 (98.56% of Force)
+|          Bond/Angle/Dihedral        0.71 ( 0.10% of Force)
+|          FRC Collect time           4.33 ( 0.61% of Force)
+|          Other                      5.21 ( 0.73% of Force)
+|       Force time               714.49 (99.77% of Runmd)
+|       Dipole update time         1.67 ( 0.23% of Runmd)
+|    Runmd Time               716.16 (99.15% of Total)
+|    Other                      6.15 ( 0.85% of Total)
+| Total time               722.32 (100.0% of ALL  )
+
+| Highest rstack allocated:     143609
+| Highest istack allocated:       2391
+|           Job began  at 14:47:14.839  on 01/08/2009
+|           Setup done at 14:47:14.939  on 01/08/2009
+|           Run   done at 14:59:17.163  on 01/08/2009
+|     wallclock() was called  330012 times
