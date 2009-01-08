@@ -1,0 +1,12 @@
+loadoff lib/sulfate.lib
+loadoff lib/Na+.lib
+
+loadamberparams frcmod/frcmod.sulfate
+loadamberparams frcmod/frcmod.ions
+
+sulbox = loadpdb pdb/sulfatebox.pdb
+set sulbox box {30.0 30.0 30.0}
+check sulbox
+
+saveamberparmpol sulbox prmtop/sulfatebox-test.prmtop mdcrd/sulfatebox-test.mdcrd
+quit

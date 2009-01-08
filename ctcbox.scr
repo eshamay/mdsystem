@@ -1,0 +1,7 @@
+loadamberparams frcmod/frcmod.ctc
+loadoff lib/ctc.lib
+ctcbox = loadpdb pdb/ctcbox.pdb
+set ctcbox box {30.0 30.0 30.0}
+check ctcbox
+saveamberparmpol ctcbox ctcbox.top ctcbox.crd
+quit

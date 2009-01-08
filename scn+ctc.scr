@@ -1,0 +1,47 @@
+addAtomTypes {
+	{ "H"   "H" "sp3" }
+	{ "H1"  "H" "sp3" }
+	{ "H2"  "H" "sp3" }
+	{ "HW"  "H" "sp3" }
+	{ "OH"  "O" "sp3" }
+	{ "O"   "O" "sp2" }
+	{ "OW"  "O" "sp3" }
+	{ "C"   "C" "sp2" }
+	{ "C*"  "C" "sp2" }
+	{ "N"   "N" "sp2" }
+	{ "NA"  "N" "sp2" }
+	{ "N2"  "N" "sp2" }
+	{ "N*"  "N" "sp2" }
+	{ "NP"  "N" "sp2" }
+	{ "NQ"  "N" "sp2" }
+	{ "NB"  "N" "sp2" }
+	{ "NC"  "N" "sp2" }
+	{ "NT"  "N" "sp3" }
+	{ "N3"  "N" "sp3" }
+	{ "S"   "S" "sp3" }
+	{ "SH"  "S" "sp3" }
+	{ "P"   "P" "sp3" }
+	{ "LP"  ""  "sp3" }
+	{ "F"   "F" "sp3" }
+	{ "CL"  "Cl" "sp3" }
+	{ "BR"  "Br" "sp3" }
+	{ "I"   "I"  "sp3" }
+	{ "FE"  "Fe" "sp3" }
+	{ "EP"  ""  "sp3" }
+}
+
+loadamberparams frcmod/frcmod.scn
+loadamberparams frcmod/frcmod.na-scn
+loadamberparams frcmod.pol3
+loadamberparams frcmod/frcmod.ctc
+
+loadoff lib/ctc.lib
+loadoff lib/scn.lib
+loadoff lib/pol3.lib
+loadoff lib/na-scn.lib
+
+scnctc = loadpdb pdb/scn+ctc.pdb
+set scnctc box {30.0 30.0 114.0}
+check scnctc
+saveamberparmpol scnctc prmtop/scn+ctc.prmtop mdcrd/scn+ctc.mdcrd
+quit

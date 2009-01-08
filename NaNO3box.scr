@@ -1,0 +1,14 @@
+loadoff lib/ions.lib
+loadoff lib/no3.lib
+
+loadamberparams frcmod/frcmod.ions
+loadamberparams frcmod/frcmod.no3
+
+nano3box = loadpdb pdb/NaNO3box.pdb
+set nano3box box {30.0 30.0 30.0}
+
+
+check nano3box
+
+saveamberparmpol nano3box prmtop/NaNO3box.prmtop mdcrd/NaNO3box.mdcrd
+quit
