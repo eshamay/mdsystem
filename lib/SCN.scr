@@ -1,0 +1,19 @@
+s = createAtom S S -0.75
+c = createAtom C C 0.49
+n = createAtom N N -0.74
+set s element S
+set c element C
+set n element N
+thiocyanate = createResidue scn
+add thiocyanate s
+add thiocyanate c
+add thiocyanate n
+bond s c S
+bond c n T
+scn = createUnit scn
+add scn thiocyanate
+zMatrix scn {
+{ s c 1.6787 }
+{ n c s 1.2073 178.68 }
+}
+saveOff scn thiocyanate.lib

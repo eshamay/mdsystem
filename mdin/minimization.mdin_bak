@@ -1,0 +1,11 @@
+
+ General minimization script
+ &cntrl
+  IMIN = 1,      
+  IPOL = 0,
+  NTPR = 250, NTAVE = 20, NTWR = 20, IWRAP = 1, 
+  NTB = 1, NTC = 1,
+  MAXCYC = 100000, NCYC = 3000,
+ &ewald
+  SKINNB = 1.0
+ /

@@ -1,0 +1,15 @@
+loadoff lib/ions.lib
+loadoff lib/so4.lib
+loadoff lib/ctc.lib
+
+loadamberparams frcmod/frcmod.ions
+loadamberparams frcmod/frcmod.so4
+loadamberparams frcmod/frcmod.ctc
+
+na2so4box = loadpdb pdb/Na2SO4+CTCbox.pdb
+set na2so4box box {30.0 90.0 30.0}
+
+check na2so4box
+
+saveamberparmpol na2so4box prmtop/Na2SO4+CTC-long.prmtop mdcrd/Na2SO4+CTC-long.mdcrd
+quit

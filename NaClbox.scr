@@ -1,0 +1,10 @@
+loadoff lib/ions.lib
+
+loadamberparams frcmod/frcmod.ions
+
+naclbox = loadpdb pdb/NaClbox.pdb
+set naclbox box {30.0 30.0 30.0}
+check naclbox
+
+saveamberparmpol naclbox prmtop/NaClbox.prmtop mdcrd/NaClbox.mdcrd
+quit

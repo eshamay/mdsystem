@@ -1,0 +1,9 @@
+na = createAtom Na IP 1.0
+set na element Na
+set na position { 0 0 0 }
+r = createResidue na+
+add r na
+na+ = createUnit na+
+add na+ r
+saveOff na+ na-scn.lib
+quit

@@ -1,0 +1,51 @@
+#!/bin/bash
+
+# command line syntax for sander
+# sander [-O] -i mdin -o mdout -p prmtop -c inpcrd -r restrt [-ref refc -x mdcrd -v mdvel -e mden -inf mdinfo]
+
+# Restarting an amber run from a previous trajectory
+echo "Beginning a data collection run"
+
+# 1) Project name
+# 2) input coordinate file
+# 3) output base directory
+#$DO_PARALLEL sander.MPI -O \
+function restrt {
+	sander -O \
+	   -i $MD_HOME/mdin/forcetest.mdin \
+  	   -p $MD_HOME/prmtop/$1.prmtop \
+	   -c $2 \
+	   -idip $3/dip/$1.equil.dip \
+ 	   -o $3/mdout/$1.forcetest.mdout \
+	   -r $3/restrt/$1.forcetest.restrt \
+	   -x $3/mdcrd/$1.forcetest.mdcrd \
+	   -v $3/mdvel/$1.forcetest.mdvel \
+	   -e $3/mden/$1.forcetest.mden \
+	   -rdip $3/dip/$1.forcetest.dip
+}
+
+if [ -z $1 ];
+then
+	echo "We need atleast a base project name!"
+	exit
+else
+	# we have a root name, let's check if we have a specific input filename, too
+	echo "Project Name = $1"
+fi
+
+if [ -z $2 ];
+then
+	echo "Input coordinates: ${MD_HOME}/restrt/$1.equil.restrt"
+else
+	echo "Input coordinates taken from $2"
+	# lastly let's see if the output dir is set
+fi
+
+if [ -z $3 ];
+then
+	echo "Output base directory: ${MD_HOME}"
+else
+	echo "Output base directory set to $3"
+fi
+
+restrt $1 ${2:-${MD_HOME}/restrt/$1.equil.restrt} ${3:-$MD_HOME};

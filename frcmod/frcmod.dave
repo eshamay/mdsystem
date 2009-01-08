@@ -1,0 +1,87 @@
+ Parameter file for pol3 water, ccl4, dce, dcm, hexane and benzene
+MASS
+CA  12.01   0.360                            sp2 carbon (bnz)
+CT  12.01   0.878                            sp3 carbon
+HA  1.008   0.167                            aromatic hydrogen (bnz)
+HC  1.008   0.135                            aliphatic hydrogen (hex,ccl4)
+H1  1.008   0.135                            dce hydrogen
+H2  1.008   0.135                            dcm hydrogen
+H3  1.008   0.135                            chloroform hydrogen
+HW  1.008   0.170                            pol3 hydrogen
+DW  2.008   0.170                            pol3 deuterium
+OW  16.00   0.528                            pol3 oxygen
+CL  35.45   1.910                            ccl4, dce, dcm
+Na  22.99   0.250                            Na+
+Cl  35.45   1.910                            Cl-
+
+BOND
+OW-HW  320.0    1.0000
+OW-DW  320.0    1.0000
+HW-HW  553.0    1.6330
+DW-DW  553.0    1.6330
+HW-DW  553.0    1.6330
+CA-CA  469.0    1.4000
+CA-HA  367.0    1.0800
+CT-CT  310.0    1.5260
+CT-HC  340.0    1.0900
+CT-H1  340.0    1.0900
+CT-H2  340.0    1.0900
+CT-H3  340.0    1.0900
+CL-CT  232.0    1.7660
+CL-CL  232.0    2.8835
+
+ANGL
+HW-OW-HW    100.0       104.52
+DW-OW-DW    100.0       104.52
+HW-OW-DW    100.0       104.52
+DW-OW-HW    100.0       104.52
+HW-HW-OW      0.0       127.74
+DW-DW-OW      0.0       127.74
+HW-DW-OW      0.0       127.74
+DW-HW-OW      0.0       127.74
+CA-CA-CA     63.0       120.00
+CA-CA-HA     50.0       120.00
+HC-CT-HC     35.0       109.50
+H1-CT-H1     35.0       109.50
+H2-CT-H2     35.0       109.50
+H3-CT-H3     35.0       109.50
+CT-CT-CT     40.0       109.50
+CT-CT-HC     50.0       109.50
+CT-CT-H1     50.0       109.50
+CL-CT-CT     50.0       108.50   consistent with parm02; used to be 35.275
+CL-CT-H1     50.0       108.50
+CL-CT-H2     50.0       108.50
+CL-CT-H3     50.0       108.50
+CL-CT-HC     50.0       108.50   
+CL-CT-CL     77.7       109.45
+CL-CL-CL     50.0       60.000
+CT-CT-CL     50.0       109.00 
+
+DIHE
+X -CA-CA-X     4       14.50       180.0        2.0
+X -CT-CT-X     9        1.40         0.0        3.0
+HC-CT-CT-HC    1        0.15         0.0        3.0
+HC-CT-CT-CT    1        0.16         0.0        3.0
+CT-CT-CT-CT    1        0.18         0.0       -3.0
+CT-CT-CT-CT    1        0.25       180.0       -2.0
+CT-CT-CT-CT    1        0.20       180.0        1.0
+CL-CT-CT-CL    1        0.45       180.0        1.0
+H1-CT-CT-CL    1        0.25         0.0        1.0
+X -X -CA-HA              1.1       180.0        2.0
+X -HW-OW-X     2        0.00         0.0        1.0
+X -DW-OW-X     2        0.00         0.0        1.0
+
+NONB
+  HC       1.4870     0.0157
+  H1       1.3870     0.0157
+  H2       1.2870     0.0157
+  H3       1.1870     0.0157
+  HA       1.4590     0.0150
+  HW       0.0000     0.0000
+  DW       0.0000     0.0000
+  OW       1.7980     0.1560
+  CT       1.9080     0.1094
+  CA       1.9080     0.0860
+  CL       1.9480     0.2650
+  Na       1.8680     0.00277
+  Cl       1.9480     0.2650

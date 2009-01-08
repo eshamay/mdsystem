@@ -1,0 +1,6 @@
+ &cntrl
+  IMIN = 1,
+  NTPR = 500, NTWR = 1000, IWRAP = 1, 
+  NTB = 1, CUT = 8.0,
+  MAXCYC = 100000, NCYC = 1000,
+ &end

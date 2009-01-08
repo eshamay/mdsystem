@@ -1,0 +1,18 @@
+
+Running a test to output forces
+  &cntrl
+   NTX=1, IWRAP=1, imin=0, nmropt=0,
+   NTF=2, NTC=2, NTB=1, NTP=0, IPOL=1, CUT=10.0,
+   NTT=3, GAMMA_LN=5.0, TEMPI=300.0, TEMP0=300.0, nscm=250,
+   NTPR=10, NTWR=10, NTWX=10, NTWV=10,
+   NSTLIM=100, DT=0.001, T=0.0,
+   WATNAM='h2o ', JFASTW=0,
+  /
+  &ewald
+   ew_type=0, indmeth=3, diptau=9.99, irstdip=0,
+  /
+  &debugf
+   do_debugf = 1,
+   atomn = 1,
+   DUMPFRC = 1, 
+  / 

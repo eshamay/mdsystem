@@ -1,0 +1,14 @@
+Parameter set for sulfate simulations (see Cannon, WR. JPC 1994, 98, p. 6225, and the paper by Jungwirth C.P.Lett.,367,2003,704)
+MASS
+S    32.065     0.000
+O    15.994     1.775
+ 
+BOND
+O-S   448.7		1.4898
+
+ANGLE
+O-S-O    74.4	110.61
+
+NONB
+  S        3.55		 0.250
+  O        3.15      0.200

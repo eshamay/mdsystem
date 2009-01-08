@@ -1,0 +1,48 @@
+#!/bin/bash
+
+# command line syntax for sander
+# sander [-O] -i mdin -o mdout -p prmtop -c inpcrd -r restrt [-ref refc -x mdcrd -v mdvel -e mden -inf mdinfo]
+
+# Run an evolveibration
+echo "Running an evolveibration"
+#$DO_PARALLEL sander.MPI -O \
+	#mpirun -np 8 sander.MPI -O \
+	#sander -O \
+
+function evolve {
+	mpirun -np 8 sander.MPI -O \
+	   -i $MD_HOME/mdin/evolve.mdin \
+  	   -p $MD_HOME/prmtop/$1.prmtop \
+	   -c $2 \
+ 	   -o $3/mdout/$1.equil.mdout \
+	   -r $3/restrt/$1.equil.restrt \
+	   -idip $3/dip/$1.equil.dip \
+	   -rdip $3/dip/$1.equil.dip
+
+}
+
+if [ -z $1 ];
+then
+	echo "We need a base project name!"
+	exit
+else
+	echo "Project Name = $1"
+	# we have a root name, let's check if we have a specific input filename, too
+fi
+
+	# let's see if the output dir is set
+if [ -z $2 ];
+then
+	echo "Input coordinates: $MD_HOME/restrt/$1.equil.restrt"
+else
+	echo "Input coordinates taken from $2"
+fi
+
+if [ -z $3 ];
+then
+	echo "Output directory: $MD_HOME"
+else
+	echo "Output base directory set to $3"
+fi
+
+evolve $1 ${2:-${MD_HOME}/restrt/$1.equil.restrt} ${3:-$MD_HOME};

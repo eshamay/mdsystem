@@ -1,0 +1,12 @@
+Temperature annealing of water-octane box (NVT):
+  &cntrl
+   imin=0, nmropt=0, ntx=1, irest=0, iwrap=1,
+   ntf=2, ntb=1, ntc=2, ipol=1, nscm=1000, iwrap=1, irest=0,
+   ntt=1, temp0=300.0, tautp=5.0,
+   ntwx=1000, ntwv=1000, ntpr=1000, ntwr=1000,
+   nstlim=1000000, dt=0.001,
+  &end
+  &ewald
+   ew_type=0, frc_int=0,
+   indmeth=3, diptau=9.99, irstdip=1,
+  &end

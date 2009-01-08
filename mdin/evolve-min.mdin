@@ -1,0 +1,10 @@
+
+ General minimization script
+ &cntrl
+  IMIN = 1, DX0=0.2, NTX=1, IREST=1,
+  IWRAP = 1, NTF=2, NTC=2, NTB = 1, IPOL=1,
+  NTPR = 100, NTWR = 100,
+  NTMIN = 1, MAXCYC = 1000000, NCYC=50000,
+  WATNAM='h2o ', JFASTW=0,
+  CUT = 10.0
+ /

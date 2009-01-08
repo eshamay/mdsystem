@@ -1,0 +1,16 @@
+
+Data collection for 5 ns (collecting every 50 fs)
+  &cntrl
+   imin=0, nmropt=0, ntx=5, irest=1, iwrap=1,
+   ntf=2, ntc=2, ntb=1, ipol=1, cut=10.0, ntt=3, nscm=250, gamma_ln=5.0,
+   ntwx=50, ntwv=50, ntpr=50, ntwr=50,
+   tempi=300.0, temp0=300.0, nstlim=50, dt=0.001, T=0.0, watnam='h2o ', jfastw=0,
+  /
+  &ewald
+   ew_type=0, indmeth=3, diptau=9.99, irstdip=0,
+  /
+  &debugf
+   do_debugf = 1,
+   atomn = 1,
+   DUMPFRC = 1, 
+  / 

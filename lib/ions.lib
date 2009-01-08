@@ -1,0 +1,149 @@
+!!index array str
+ "br-"
+ "cl-"
+ "k+"
+ "na+"
+!entry.br-.unit.atoms table  str name  str type  int typex  int resx  int flags  int seq  int elmnt  dbl chg
+ "BR" "IB" 0 1 131072 1 -1 -1.000000
+!entry.br-.unit.atomspertinfo table  str pname  str ptype  int ptypex  int pelmnt  dbl pchg
+ "BR" "IB" 0 -1 0.0
+!entry.br-.unit.boundbox array dbl
+ -1.000000
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+!entry.br-.unit.childsequence single int
+ 2
+!entry.br-.unit.connect array int
+ 0
+ 0
+!entry.br-.unit.hierarchy table  str abovetype  int abovex  str belowtype  int belowx
+ "U" 0 "R" 1
+ "R" 1 "A" 1
+!entry.br-.unit.name single str
+ "br-"
+!entry.br-.unit.positions table  dbl x  dbl y  dbl z
+ 0.0 0.0 0.0
+!entry.br-.unit.residueconnect table  int c1x  int c2x  int c3x  int c4x  int c5x  int c6x
+ 0 0 0 0 0 0
+!entry.br-.unit.residues table  str name  int seq  int childseq  int startatomx  str restype  int imagingx
+ "br-" 1 2 1 "?" 0
+!entry.br-.unit.residuesPdbSequenceNumber array int
+ 0
+!entry.br-.unit.solventcap array dbl
+ -1.000000
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+!entry.br-.unit.velocities table  dbl x  dbl y  dbl z
+ 0.0 0.0 0.0
+!entry.cl-.unit.atoms table  str name  str type  int typex  int resx  int flags  int seq  int elmnt  dbl chg
+ "CL" "IC" 0 1 131072 1 17 -1.000000
+!entry.cl-.unit.atomspertinfo table  str pname  str ptype  int ptypex  int pelmnt  dbl pchg
+ "CL" "IC" 0 -1 0.0
+!entry.cl-.unit.boundbox array dbl
+ -1.000000
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+!entry.cl-.unit.childsequence single int
+ 2
+!entry.cl-.unit.connect array int
+ 0
+ 0
+!entry.cl-.unit.hierarchy table  str abovetype  int abovex  str belowtype  int belowx
+ "U" 0 "R" 1
+ "R" 1 "A" 1
+!entry.cl-.unit.name single str
+ "cl-"
+!entry.cl-.unit.positions table  dbl x  dbl y  dbl z
+ 0.0 0.0 0.0
+!entry.cl-.unit.residueconnect table  int c1x  int c2x  int c3x  int c4x  int c5x  int c6x
+ 0 0 0 0 0 0
+!entry.cl-.unit.residues table  str name  int seq  int childseq  int startatomx  str restype  int imagingx
+ "cl-" 1 2 1 "?" 0
+!entry.cl-.unit.residuesPdbSequenceNumber array int
+ 0
+!entry.cl-.unit.solventcap array dbl
+ -1.000000
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+!entry.cl-.unit.velocities table  dbl x  dbl y  dbl z
+ 0.0 0.0 0.0
+!entry.k+.unit.atoms table  str name  str type  int typex  int resx  int flags  int seq  int elmnt  dbl chg
+ "K" "IK" 0 1 131072 1 19 1.000000
+!entry.k+.unit.atomspertinfo table  str pname  str ptype  int ptypex  int pelmnt  dbl pchg
+ "K" "IK" 0 -1 0.0
+!entry.k+.unit.boundbox array dbl
+ -1.000000
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+!entry.k+.unit.childsequence single int
+ 2
+!entry.k+.unit.connect array int
+ 0
+ 0
+!entry.k+.unit.hierarchy table  str abovetype  int abovex  str belowtype  int belowx
+ "U" 0 "R" 1
+ "R" 1 "A" 1
+!entry.k+.unit.name single str
+ "k+"
+!entry.k+.unit.positions table  dbl x  dbl y  dbl z
+ 0.0 0.0 0.0
+!entry.k+.unit.residueconnect table  int c1x  int c2x  int c3x  int c4x  int c5x  int c6x
+ 0 0 0 0 0 0
+!entry.k+.unit.residues table  str name  int seq  int childseq  int startatomx  str restype  int imagingx
+ "k+" 1 2 1 "?" 0
+!entry.k+.unit.residuesPdbSequenceNumber array int
+ 0
+!entry.k+.unit.solventcap array dbl
+ -1.000000
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+!entry.k+.unit.velocities table  dbl x  dbl y  dbl z
+ 0.0 0.0 0.0
+!entry.na+.unit.atoms table  str name  str type  int typex  int resx  int flags  int seq  int elmnt  dbl chg
+ "NA" "IP" 0 1 131072 1 11 1.000000
+!entry.na+.unit.atomspertinfo table  str pname  str ptype  int ptypex  int pelmnt  dbl pchg
+ "NA" "IP" 0 -1 0.0
+!entry.na+.unit.boundbox array dbl
+ -1.000000
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+!entry.na+.unit.childsequence single int
+ 2
+!entry.na+.unit.connect array int
+ 0
+ 0
+!entry.na+.unit.hierarchy table  str abovetype  int abovex  str belowtype  int belowx
+ "U" 0 "R" 1
+ "R" 1 "A" 1
+!entry.na+.unit.name single str
+ "na+"
+!entry.na+.unit.positions table  dbl x  dbl y  dbl z
+ 0.0 0.0 0.0
+!entry.na+.unit.residueconnect table  int c1x  int c2x  int c3x  int c4x  int c5x  int c6x
+ 0 0 0 0 0 0
+!entry.na+.unit.residues table  str name  int seq  int childseq  int startatomx  str restype  int imagingx
+ "na+" 1 2 1 "?" 0
+!entry.na+.unit.residuesPdbSequenceNumber array int
+ 0
+!entry.na+.unit.solventcap array dbl
+ -1.000000
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+!entry.na+.unit.velocities table  dbl x  dbl y  dbl z
+ 0.0 0.0 0.0

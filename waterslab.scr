@@ -1,0 +1,7 @@
+waterslab = loadpdb pdb/waterslab.pdb
+
+set waterslab box {26.0 52.0 26.0}
+
+check waterslab
+saveamberparmpol waterslab prmtop/waterslab.prmtop mdcrd/waterslab.mdcrd
+quit

@@ -1,0 +1,9 @@
+#!/bin/bash
+if [ -z $1 ];
+then
+	echo "no input!"
+else
+	echo "you typed '$1'"
+	exit
+	echo "a test"
+fi

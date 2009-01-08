@@ -1,0 +1,63 @@
+!!index array str
+ "ctc"
+!entry.ctc.unit.atoms table  str name  str type  int typex  int resx  int flags  int seq  int elmnt  dbl chg
+ "C" "CT" 0 1 131075 1 6 -0.161600
+ "Cl1" "CL" 0 1 131075 2 17 0.040400
+ "Cl2" "CL" 0 1 131075 3 17 0.040400
+ "Cl3" "CL" 0 1 131075 4 17 0.040400
+ "Cl4" "CL" 0 1 131075 5 17 0.040400
+!entry.ctc.unit.atomspertinfo table  str pname  str ptype  int ptypex  int pelmnt  dbl pchg
+ "C" "CT" 0 -1 0.0
+ "Cl1" "CL" 0 -1 0.0
+ "Cl2" "CL" 0 -1 0.0
+ "Cl3" "CL" 0 -1 0.0
+ "Cl4" "CL" 0 -1 0.0
+!entry.ctc.unit.boundbox array dbl
+ -1.000000
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+!entry.ctc.unit.childsequence single int
+ 2
+!entry.ctc.unit.connect array int
+ 0
+ 0
+!entry.ctc.unit.connectivity table  int atom1x  int atom2x  int flags
+ 1 4 1
+ 1 5 1
+ 1 2 1
+ 1 3 1
+!entry.ctc.unit.hierarchy table  str abovetype  int abovex  str belowtype  int belowx
+ "U" 0 "R" 1
+ "R" 1 "A" 1
+ "R" 1 "A" 2
+ "R" 1 "A" 3
+ "R" 1 "A" 4
+ "R" 1 "A" 5
+!entry.ctc.unit.name single str
+ ""
+!entry.ctc.unit.positions table  dbl x  dbl y  dbl z
+ 0.0 0.0 0.0
+ 0.0 0.0 1.783000
+ 0.0 1.681000 -0.594000
+ 1.456000 -0.840000 -0.594000
+ -1.456000 -0.840000 -0.594000
+!entry.ctc.unit.residueconnect table  int c1x  int c2x  int c3x  int c4x  int c5x  int c6x
+ 0 0 0 0 0 0
+!entry.ctc.unit.residues table  str name  int seq  int childseq  int startatomx  str restype  int imagingx
+ "ctc" 1 6 1 "?" 0
+!entry.ctc.unit.residuesPdbSequenceNumber array int
+ 1
+!entry.ctc.unit.solventcap array dbl
+ -1.000000
+ 0.0
+ 0.0
+ 0.0
+ 0.0
+!entry.ctc.unit.velocities table  dbl x  dbl y  dbl z
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0
+ 0.0 0.0 0.0

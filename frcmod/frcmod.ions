@@ -1,0 +1,10 @@
+Parameters for a set of ions from various sources (cl- from Dang1999, Na+ from Dang 2002
+MASS
+IP	22.99	0.240
+IC  35.45	3.690
+IB	79.90	4.530
+
+NONB
+IP	2.2718	0.100
+IC  4.410	0.100
+IB	3.854	0.125
