@@ -3,7 +3,7 @@ Running an equilibration
   &cntrl
    NTX=1, IWRAP=1, imin=0, nmropt=0,
    NTF=2, NTC=2, NTB=1, NTP=0, IPOL=1, CUT=8.0,
-   NTT=3, TAUTP=5.0, TEMPI=300.0, TEMP0=300.0, nscm=250, gamma_ln=5.0,
+   NTT=3, TAUTP=5.0, TEMPI=300.0, TEMP0=300.0, nscm=250,
    NTPR=2500, NTWR=1000,
    NSTLIM=1000000, DT=0.001, T=0.0,
    WATNAM='h2o ', JFASTW=0,

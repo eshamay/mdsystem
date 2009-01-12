@@ -1,7 +1,7 @@
-loadamberparams frcmod/frcmod.ctc
-loadoff lib/ctc.lib
-ctcbox = loadpdb pdb/ctcbox.pdb
+loadamberparams ../frcmod/frcmod.ccl4
+loadoff ../lib/ccl4.lib
+ctcbox = loadpdb ../pdb/CCl4box30-30-30.pdb
 set ctcbox box {30.0 30.0 30.0}
 check ctcbox
-saveamberparmpol ctcbox ctcbox.top ctcbox.crd
+saveamberparmpol ctcbox ../prmtop/ctcbox.prmtop ../mdcrd/ctcbox.mdcrd
 quit
