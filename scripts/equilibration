@@ -15,7 +15,7 @@ function equil {
   	   -p $MD_HOME/prmtop/$1.prmtop \
 	   -c $2 \
  	   -o $3/mdout/$1.equil.mdout \
-	   -r $3/restrt/$1.equil.restrt \
+	   -r $3/restrt/$1.equil.rst7 \
 	   -x $3/mdcrd/$1.equil.mdcrd \
 	   -e $3/mden/$1.equil.mden \
 	   -rdip $3/dip/$1.equil.dip
@@ -45,4 +45,4 @@ else
 	echo "Output base directory set to $3"
 fi
 
-equil $1 ${2:-${MD_HOME}/mdcrd/$1.min.mdcrd} ${3:-$MD_HOME};
+equil $1 ${2:-${MD_HOME}/restrt/$1.min.rst7} ${3:-$MD_HOME};

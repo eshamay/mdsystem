@@ -19,7 +19,7 @@ function min {
   	   -p $MD_HOME/prmtop/$1.prmtop \
 	   -c $2 \
  	   -o $3/mdout/$1.min.mdout \
-	   -r $3/mdcrd/$1.min.mdcrd \
+	   -r $3/restrt/$1.min.rst7 \
 	   -e $3/mden/$1.min.mden \
 	   -rdip $3/dip/$1.min.dip
 }

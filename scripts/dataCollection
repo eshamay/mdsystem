@@ -17,7 +17,7 @@ function restrt {
 	   -c $2 \
 	   -idip $3/dip/$1.equil.dip \
  	   -o $3/mdout/$1.data.mdout \
-	   -r $3/restrt/$1.data.restrt \
+	   -r $3/restrt/$1.data.rst7 \
 	   -x $3/mdcrd/$1.data.mdcrd \
 	   -v $3/mdvel/$1.data.mdvel \
 	   -e $3/mden/$1.data.mden \
@@ -35,7 +35,7 @@ fi
 
 if [ -z $2 ];
 then
-	echo "Input coordinates: ${MD_HOME}/restrt/$1.equil.restrt"
+	echo "Input coordinates: ${MD_HOME}/restrt/$1.equil.rst7"
 else
 	echo "Input coordinates taken from $2"
 	# lastly let's see if the output dir is set
@@ -48,4 +48,4 @@ else
 	echo "Output base directory set to $3"
 fi
 
-restrt $1 ${2:-${MD_HOME}/restrt/$1.equil.restrt} ${3:-$MD_HOME};
+restrt $1 ${2:-${MD_HOME}/restrt/$1.equil.rst7} ${3:-$MD_HOME};

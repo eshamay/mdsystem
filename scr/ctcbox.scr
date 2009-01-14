@@ -1,7 +1,11 @@
-loadamberparams ../frcmod/frcmod.ccl4
+loadamberparams ../frcmod/frcmod.ctc
 loadoff ../lib/ccl4.lib
+
 ctcbox = loadpdb ../pdb/CCl4box30-30-30.pdb
+
 set ctcbox box {30.0 30.0 30.0}
 check ctcbox
+
 saveamberparmpol ctcbox ../prmtop/ctcbox.prmtop ../mdcrd/ctcbox.mdcrd
+
 quit

@@ -3,9 +3,9 @@
  &cntrl
   IMIN = 1, DX0=0.5,
   IWRAP = 1, NTF=2, NTC=2, NTB = 1, IPOL=1,
-  NTPR = 100, NTWR = 100,
+  NTWX = 10, ntwv=10, NTPR = 100, NTWR = 100,
   NTMIN = 1,
-  MAXCYC = 1000000, NCYC=5000,
+  MAXCYC = 1000000, NCYC=500,
   WATNAM='h2o ', JFASTW=0,
   CUT = 10.0
  /

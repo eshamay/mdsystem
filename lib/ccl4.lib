@@ -1,11 +1,11 @@
 !!index array str
  "ctc"
 !entry.ctc.unit.atoms table  str name  str type  int typex  int resx  int flags  int seq  int elmnt  dbl chg
- "C" "CT" 0 1 131075 1 6 -0.161600
- "Cl1" "CL" 0 1 131075 2 17 0.040400
- "Cl2" "CL" 0 1 131075 3 17 0.040400
- "Cl3" "CL" 0 1 131075 4 17 0.040400
- "Cl4" "CL" 0 1 131075 5 17 0.040400
+ "C" "CT" 0 1 131075 1 6 0.161600
+ "Cl1" "CL" 0 1 131075 2 17 -0.040400
+ "Cl2" "CL" 0 1 131075 3 17 -0.040400
+ "Cl3" "CL" 0 1 131075 4 17 -0.040400
+ "Cl4" "CL" 0 1 131075 5 17 -0.040400
 !entry.ctc.unit.atomspertinfo table  str pname  str ptype  int ptypex  int pelmnt  dbl pchg
  "C" "CT" 0 -1 0.0
  "Cl1" "CL" 0 -1 0.0

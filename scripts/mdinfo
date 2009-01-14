@@ -1,8 +1,8 @@
 
- NSTEP =    20000   TIME(PS) =      20.000  TEMP(K) =   173.66  PRESS =     0.0
- Etot   =    102711.7068  EKtot   =       436.8884  EPtot      =    102274.8184
- BOND   =     20649.6532  ANGLE   =     31144.9669  DIHED      =         0.0000
- 1-4 NB =         0.0000  1-4 EEL =         0.0000  VDWAALS    =     50485.5147
- EELEC  =        -4.0230  EHBOND  =         0.0000  RESTRAINT  =         0.0000
- EPOLZ  =        -1.2935
- Dipole convergence: rms =  0.672E-03 temperature =   0.00
+ NSTEP =  2440000   TIME(PS) =    3440.000  TEMP(K) =   290.41  PRESS =     0.0
+ Etot   =     -7017.0333  EKtot   =      2288.7510  EPtot      =     -9305.7843
+ BOND   =       162.7149  ANGLE   =       269.6539  DIHED      =         0.0000
+ 1-4 NB =         0.0000  1-4 EEL =         0.0000  VDWAALS    =      1282.4282
+ EELEC  =     -8589.3189  EHBOND  =         0.0000  RESTRAINT  =         0.0000
+ EPOLZ  =     -2431.2624
+ Dipole convergence: rms =  0.655E-02 temperature =   0.16

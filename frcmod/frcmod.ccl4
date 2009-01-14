@@ -1,16 +1,18 @@
-Parameter set for sulfate simulations (see Walker, et al. J. Phys. Chem. C, Vol. 111, No. 16, 2007; Chang, T. M.; Peterson, K. A.; Dang, L. X. J. Chem. Phys. 1995, 103, 7502.; also Dave's frcmod.pl3 file)
+CCl4 parameters
 MASS
 CT   	12.010		0.878
 CL    	35.453		1.910
  
 BOND
-CT-CL   232.0		1.770
+CT-CL  279.0    1.770
 
 ANGLE
-CL-CT-CL   77.7		109.47
-CL-CL-CL   50.0		60.0
-CT-CT-CL   50.0     109.00 
+CL-CT-CL    54.2      109.47
+
+DIHEDRAL
+CL-CT-CL-CL   1    0.45        0.0
 
 NONB
   CT       3.41     0.100
   CL       3.45     0.260
+
