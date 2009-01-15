@@ -1,13 +1,13 @@
-loadoff lib/ions.lib
-loadoff lib/ctc.lib
+loadoff ../lib/ions.lib
+loadoff ../lib/ctc.lib
 
-loadamberparams frcmod/frcmod.ions
-loadamberparams frcmod/frcmod.ctc
+loadamberparams ../frcmod/frcmod.ions
+loadamberparams ../frcmod/frcmod.ctc
 
-naclbox = loadpdb pdb/NaCl+CTCbox.pdb
+naclbox = loadpdb ../pdb/NaCl+CTCbox.pdb
 set naclbox box {30.0 75.0 30.0}
 
 check naclbox
 
-saveamberparmpol naclbox prmtop/NaCl+CTC.prmtop mdcrd/NaCl+CTC.mdcrd
+saveamberparmpol naclbox ../prmtop/NaCl+CTC.prmtop ../mdcrd/NaCl+CTC.mdcrd
 quit
