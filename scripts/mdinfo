@@ -1,8 +1,10 @@
 
- NSTEP =  4690000   TIME(PS) =    5690.000  TEMP(K) =   294.68  PRESS =     0.0
- Etot   =     -7048.2787  EKtot   =      2322.4584  EPtot      =     -9370.7371
- BOND   =       189.5788  ANGLE   =       245.3973  DIHED      =         0.0000
- 1-4 NB =         0.0000  1-4 EEL =         0.0000  VDWAALS    =      1387.8241
- EELEC  =     -8699.6189  EHBOND  =         0.0000  RESTRAINT  =         0.0000
- EPOLZ  =     -2493.9184
- Dipole convergence: rms =  0.627E-02 temperature =   0.16
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+    614      -1.8024E+04     1.0066E+01     4.0152E+01     H1       2084
+
+ BOND    =      136.1902  ANGLE   =      237.2480  DIHED      =        0.0000
+ VDWAALS =     6312.2585  EEL     =   -25577.8550  HBOND      =        0.0000
+ 1-4 VDW =        0.0000  1-4 EEL =        0.0000  RESTRAINT  =        0.0000
+ EPOLAR  =      868.4672
+ Dipole convergence: rms =  0.205E+00 temperature =   0.00
